@@ -1,3 +1,26 @@
 body {
-  background-color: teal;
+  background-image: url("https://wallpapercave.com/wp/wp5129837.png");
+  background-size: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.nighttimeBackground {
+  background-image: url("https://wallpapercave.com/wp/wp5611797.png");
+}
+.container {
+  height: 200px;
+  position: relative;
+  border: 3px solid black;
+  flex-wrap: bottom;
+}
+
+.center {
+  margin: 5px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-160%, -50%);
+  transform: translate(-160%, -50%);
+  flex-wrap: bottom;
 }
