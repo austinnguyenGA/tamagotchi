@@ -8,16 +8,26 @@ class Tamagotchi {
     this.age = age
     this.hunger = hunger
     this.bordom = boredom
-    this.sleepiness = sleepiness
+    this.energy = energy
   }
 }
 
+class Pain extends Tamagotchi {
+  constructor() {
+  super(name, age, hunger, boredom, sleepiness)
+  this.name = name
+  this.age = 0
+  this.hunger = 10
+  this.boredom = 10
+  this.energy = 10
+  }
+}
 const game = {
   timer: 20,
   age: 0,
   hunger: 10,
   boredom: 10,
-  sleepiness: 10,
+  energy: 10,
   gettingHungry() {},
   gettingSleepy() {},
   gettingBored() {},
@@ -37,7 +47,7 @@ sleepButton.addEventListener('click', (event) => {
   setTimeout(() => {
     backgroundElement.classList.add('daytimeBackground')
     backgroundElement.classList.remove('nighttimeBackground')
-  }, 1500)
+  }, 2500)
   }
 );
 
@@ -56,7 +66,7 @@ eatButton.addEventListener('click', (event) => {
   setTimeout(() => {
     backgroundElement2.classList.add('daytimeBackground')
     backgroundElement2.classList.remove('timeToEatBackground')
-  }, 1500)
+  }, 2500)
   }
 );
 
@@ -75,6 +85,6 @@ playButton.addEventListener('click', (event) => {
   setTimeout(() => {
     backgroundElement3.classList.add('daytimeBackground')
     backgroundElement3.classList.remove('playtimeBackground')
-  }, 1500)
+  }, 2500)
   }
 );
