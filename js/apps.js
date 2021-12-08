@@ -11,7 +11,7 @@ const removeTimer1 = document.querySelector('#foodTimer')
 const removeTimer2 = document.querySelector('#sleepTimer')
 const removeTimer3 = document.querySelector('#boredomTimer')
 const removeAge = document.querySelector('#ageTimer')
-const removePains = document.querySelector('#added-images')
+const removeContainer = document.querySelector('.container')
 
 class Tamagotchi {
   constructor(name, age, hunger, boredom, sleepiness) {
@@ -97,19 +97,19 @@ class Pain2 extends Tamagotchi {
         newImg5.id = "added-images"
         newImg5.className = "Pain6"
         newImg5.src = "https://i.imgur.com/HxsVdOP.png"
-        newImg5.alt = "Pain 6"
+        newImg5.alt = "Pain 5"
         document.querySelector('.container')
         .append(newImg5)
       }
-      // if(this.age === 7) {
-      //   const newImg6 = document.createElement('img')
-      //   newImg6.id = "added-images"
-      //   newImg6.className = "Naruto"
-      //   newImg6.src = "https://i.imgur.com/CPFkgEb.png"
-      //   newImg6.alt = "Naruto"
-      //   document.querySelector('.container')
-      //   .append(newImg6)
-      // }
+      if(this.age === 7) {
+        const newImg5 = document.createElement('img')
+        newImg6.id = "added-images"
+        newImg6.className = "Naruto"
+        newImg6.src = "https://i.imgur.com/HxsVdOP.png"
+        newImg6.alt = "Naruto"
+        document.querySelector('.container')
+        .append(newImg6)
+      }
     }, 1000)
   },
 
@@ -126,32 +126,11 @@ class Pain2 extends Tamagotchi {
       if (this.hunger <= 0) {
         clearInterval(intervalID)
           backgroundElement4.classList.remove('daytimeBackground')
-        if (backgroundElement5) {
-          backgroundElement5.remove('chibiPain');
-        }
-        if (removeButtons1) {
-          removeButtons1.remove('button')
-        }
-        if (removeButtons2) {
-          removeButtons2.remove('button')
-        }
-        if (removeButtons3) {
-          removeButtons3.remove('button')
-        }
-        if (removeTimer1) {
-          removeTimer1.remove('timer')
-        }
-        if (removeTimer2) {
-          removeTimer2.remove('timer')
-        }
-        if (removeTimer3) {
-          removeTimer3.remove('timer')
-        }
         if (removeAge) {
           removeAge.remove('evolution')
         }
-        if (removePains) {
-          removePains.remove('Pain2')
+        if (removeContainer) {
+          removeContainer.remove('.container')
         }
           backgroundElement4.classList.add('gameOverScreen')
       }
@@ -171,29 +150,11 @@ class Pain2 extends Tamagotchi {
       if (this.sleepiness <= 0) {
         clearInterval(intervalID)
           backgroundElement4.classList.remove('daytimeBackground')
-        if (backgroundElement5) {
-          backgroundElement5.remove('chibiPain');
-        }
-        if (removeButtons1) {
-          removeButtons1.remove('button')
-        }
-        if (removeButtons2) {
-          removeButtons2.remove('button')
-        }
-        if (removeButtons3) {
-          removeButtons3.remove('button')
-        }
-        if (removeTimer1) {
-          removeTimer1.remove('timer')
-        }
-        if (removeTimer2) {
-          removeTimer2.remove('timer')
-        }
-        if (removeTimer3) {
-          removeTimer3.remove('timer')
-        }
         if (removeAge) {
           removeAge.remove('evolution')
+        }
+        if (removeContainer) {
+          removeContainer.remove('.container')
         }
         backgroundElement4.classList.add('gameOverScreen')
       }
@@ -212,30 +173,12 @@ class Pain2 extends Tamagotchi {
 
       if (this.boredom <= 0) {
         clearInterval(intervalID)
-          backgroundElement4.classList.remove('daytimeBackground')
-        if (backgroundElement5) {
-          backgroundElement5.remove('chibiPain');
-        }
-        if (removeButtons1) {
-          removeButtons1.remove('button')
-        }
-        if (removeButtons2) {
-          removeButtons2.remove('button')
-        }
-        if (removeButtons3) {
-          removeButtons3.remove('button')
-        }
-        if (removeTimer1) {
-          removeTimer1.remove('timer')
-        }
-        if (removeTimer2) {
-          removeTimer2.remove('timer')
-        }
-        if (removeTimer3) {
-          removeTimer3.remove('timer')
-        }
+        backgroundElement4.classList.remove('daytimeBackground')
         if (removeAge) {
           removeAge.remove('evolution')
+        }
+        if (removeContainer) {
+          removeContainer.remove('.container')
         }
         backgroundElement4.classList.add('gameOverScreen')
       }
