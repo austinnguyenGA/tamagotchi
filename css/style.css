@@ -12,42 +12,36 @@ body {
 }
 
 .Pain2 {
-  background-image: url("https://i.imgur.com/fhbT7Q7.png");
   position: absolute;
-  top: 300px;
-  left: 500px;
+  top: 58px;
+  left: 750px;
 }
 
 .Pain3 {
-  background-image: url("https://i.imgur.com/8bDosQo.png");
   position: absolute;
-  top: 300px;
-  left: 500px;
+  top: 250px;
+  left: 700px;
 }
 
 .Pain4 {
-  background-image: url("https://i.imgur.com/cmIcu37.png");
   position: absolute;
-  top: 300px;
-  left: 500px;
+  top: 350px;
+  left: 100px;
 }
 
 .Pain5 {
-  background-image: url("https://i.imgur.com/D8twvK9.jpg");
   position: absolute;
   top: 300px;
-  left: 500px;
+  left: 300px;
 }
 
 .Pain6 {
-  background-image: url("https://i.imgur.com/HxsVdOP.png");
   position: absolute;
-  top: 300px;
+  top: 30px;
   left: 500px;
 }
 
 .Naruto {
-  background-image: url("https://i.imgur.com/CPFkgEb.png");
   position: absolute;
   top: 300px;
   left: 500px;
