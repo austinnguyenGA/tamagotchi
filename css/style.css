@@ -12,7 +12,42 @@ body {
 }
 
 .Pain2 {
-  background-image: url("https://i.imgur.com/qkxyBpK.png");
+  background-image: url("https://i.imgur.com/fhbT7Q7.png");
+  position: absolute;
+  top: 300px;
+  left: 500px;
+}
+
+.Pain3 {
+  background-image: url("https://i.imgur.com/8bDosQo.png");
+  position: absolute;
+  top: 300px;
+  left: 500px;
+}
+
+.Pain4 {
+  background-image: url("https://i.imgur.com/cmIcu37.png");
+  position: absolute;
+  top: 300px;
+  left: 500px;
+}
+
+.Pain5 {
+  background-image: url("https://i.imgur.com/D8twvK9.jpg");
+  position: absolute;
+  top: 300px;
+  left: 500px;
+}
+
+.Pain6 {
+  background-image: url("https://i.imgur.com/HxsVdOP.png");
+  position: absolute;
+  top: 300px;
+  left: 500px;
+}
+
+.Naruto {
+  background-image: url("https://i.imgur.com/CPFkgEb.png");
   position: absolute;
   top: 300px;
   left: 500px;
@@ -74,7 +109,7 @@ body {
   position: relative;
   justify-content: space-between;
   top: 575px;
-  left: 290px;
+  left: 200px;
   -ms-transform: translate(-160%, -50%);
   transform: translate(-160%, -50%);
 }
@@ -83,11 +118,21 @@ body {
   margin: 5px;
   position: relative;
   top: 600px;
-  left: 500px;
+  left: 450px;
   -ms-transform: translate(-160%, -50%);
   transform: translate(-160%, -50%);
-  color: blue;
-  font-size: 20px;
+  color: white;
+  font-size: 25px;
   font-weight: bold;
-  text-shadow: 2px 2px 0 white;
+  text-shadow: 1px 1px 0 black;
+}
+
+.evolution {
+  margin: 5px;
+  position: relative;
+  left: 590px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 0 black;
 }

@@ -1,6 +1,16 @@
 console.log("tamagotchi")
 
 // make class for tamagotchi
+const backgroundElement4 = document.querySelector('#background')
+const gameOverBackground = document.querySelector('#gameOverScreen')
+const backgroundElement5 = document.querySelector('#chibiPain')
+const removeButtons1 = document.querySelector('#Feed')
+const removeButtons2 = document.querySelector('#Sleep')
+const removeButtons3 = document.querySelector('#Play')
+const removeTimer1 = document.querySelector('#foodTimer')
+const removeTimer2 = document.querySelector('#sleepTimer')
+const removeTimer3 = document.querySelector('#boredomTimer')
+const removePains = document.querySelector('#ageTimer')
 
 class Tamagotchi {
   constructor(name, age, hunger, boredom, sleepiness) {
@@ -41,26 +51,31 @@ class Pain extends Tamagotchi {
 
       if (this.hunger <= 0) {
         clearInterval(intervalID)
-        const backgroundElement4 = document.querySelector('#background')
-        const gameOverBackground = document.querySelector('#gameOverScreen')
-        const backgroundElement5 = document.querySelector('#chibiPain')
-        const removeButtons1 = document.querySelector('#Feed')
-        const removeButtons2 = document.querySelector('#Sleep')
-        const removeButtons3 = document.querySelector('#Play')
-        const removeTimer1 = document.querySelector('#foodTimer')
-        const removeTimer2 = document.querySelector('#sleepTimer')
-        const removeTimer3 = document.querySelector('#boredomTimer')
-          backgroundElement4.classList.add('gameOverScreen')
           backgroundElement4.classList.remove('daytimeBackground')
-          backgroundElement5.classList.remove('chibiPain')
-          removeButtons1.classList.remove('button')
-          removeButtons2.classList.remove('button')
-          removeButtons3.classList.remove('button')
-          removeTimer1.classList.remove('timer')
-          removeTimer2.classList.remove('timer')
-          removeTimer3.classList.remove('timer')
+        if (backgroundElement5) {
+          backgroundElement5.remove('chibiPain');
+        }
+        if (removeButtons1) {
+          removeButtons1.remove('button')
+        }
+        if (removeButtons2) {
+          removeButtons2.remove('button')
+        }
+        if (removeButtons3) {
+          removeButtons3.remove('button')
+        }
+        if (removeTimer1) {
+          removeTimer1.remove('timer')
+        }
+        if (removeTimer2) {
+          removeTimer2.remove('timer')
+        }
+        if (removeTimer3) {
+          removeTimer3.remove('timer')
+        }
+          backgroundElement4.classList.add('gameOverScreen')
       }
-    }, 3000)
+    }, 1000)
   },
 
   gettingSleepy() {
@@ -75,60 +90,70 @@ class Pain extends Tamagotchi {
 
       if (this.sleepiness <= 0) {
         clearInterval(intervalID)
-        const backgroundElement4 = document.querySelector('#background')
-        const gameOverBackground = document.querySelector('#gameOverScreen')
-        const backgroundElement5 = document.querySelector('#chibiPain')
-        const removeButtons1 = document.querySelector('#Feed')
-        const removeButtons2 = document.querySelector('#Sleep')
-        const removeButtons3 = document.querySelector('#Play')
-        const removeTimer1 = document.querySelector('#foodTimer')
-        const removeTimer2 = document.querySelector('#sleepTimer')
-        const removeTimer3 = document.querySelector('#boredomTimer')
-          backgroundElement4.classList.add('gameOverScreen')
           backgroundElement4.classList.remove('daytimeBackground')
-          backgroundElement5.classList.remove('chibiPain')
-          removeButtons1.classList.remove('button')
-          removeButtons2.classList.remove('button')
-          removeButtons3.classList.remove('button')
-          removeTimer1.classList.remove('timer')
-          removeTimer2.classList.remove('timer')
-          removeTimer3.classList.remove('timer')
+        if (backgroundElement5) {
+          backgroundElement5.remove('chibiPain');
+        }
+        if (removeButtons1) {
+          removeButtons1.remove('button')
+        }
+        if (removeButtons2) {
+          removeButtons2.remove('button')
+        }
+        if (removeButtons3) {
+          removeButtons3.remove('button')
+        }
+        if (removeTimer1) {
+          removeTimer1.remove('timer')
+        }
+        if (removeTimer2) {
+          removeTimer2.remove('timer')
+        }
+        if (removeTimer3) {
+          removeTimer3.remove('timer')
+        }
+        backgroundElement4.classList.add('gameOverScreen')
+
       }
-    }, 3000)
+    }, 1000)
   },
   gettingBored() {
     const boredTimer = document.querySelector('#boredomTimer')
 
     this.boredom --
-    boredTimer.innerText = `Energy: ${this.boredom}`
+    boredTimer.innerText = `Boredom: ${this.boredom}`
 
     const intervalID = setInterval(() => {
       this.boredom --
-      boredTimer.innerText = `Energy: ${this.boredom}`
+      boredTimer.innerText = `Boredom: ${this.boredom}`
 
       if (this.boredom <= 0) {
         clearInterval(intervalID)
-        const backgroundElement4 = document.querySelector('#background')
-        const gameOverBackground = document.querySelector('#gameOverScreen')
-        const backgroundElement5 = document.querySelector('#chibiPain')
-        const removeButtons1 = document.querySelector('#Feed')
-        const removeButtons2 = document.querySelector('#Sleep')
-        const removeButtons3 = document.querySelector('#Play')
-        const removeTimer1 = document.querySelector('#foodTimer')
-        const removeTimer2 = document.querySelector('#sleepTimer')
-        const removeTimer3 = document.querySelector('#boredomTimer')
-          backgroundElement4.classList.add('gameOverScreen')
           backgroundElement4.classList.remove('daytimeBackground')
-          backgroundElement5.classList.remove('chibiPain')
-          removeButtons1.classList.remove('button')
-          removeButtons2.classList.remove('button')
-          removeButtons3.classList.remove('button')
-          removeTimer1.classList.remove('timer')
-          removeTimer2.classList.remove('timer')
-          removeTimer3.classList.remove('timer')
-
+        if (backgroundElement5) {
+          backgroundElement5.remove('chibiPain');
+        }
+        if (removeButtons1) {
+          removeButtons1.remove('button')
+        }
+        if (removeButtons2) {
+          removeButtons2.remove('button')
+        }
+        if (removeButtons3) {
+          removeButtons3.remove('button')
+        }
+        if (removeTimer1) {
+          removeTimer1.remove('timer')
+        }
+        if (removeTimer2) {
+          removeTimer2.remove('timer')
+        }
+        if (removeTimer3) {
+          removeTimer3.remove('timer')
+        }
+        backgroundElement4.classList.add('gameOverScreen')
       }
-    }, 3000)
+    }, 1000)
   },
   feed(){
     const hungerButton = document.querySelector('#Feed')
@@ -151,6 +176,17 @@ class Pain extends Tamagotchi {
 
     })
   },
+  // growing(){
+  //   const agingUp = document.querySelector('#Pain')
+  //   const intervalID = setInterval(() => {
+  //     this.age ++
+  //     agingUp.innerText = `Pains: ${this.age}`
+  //     document.quer
+  //     if (this.age <= 7) {
+  //       clearInterval(intervalID)
+  //     }
+  //   }, 5000)
+  // }
 }
 
 const backgroundElement = document.querySelector('#background');
@@ -198,3 +234,4 @@ game.gettingBored()
 game.feed()
 game.sleep()
 game.play()
+//game.agingUp()
