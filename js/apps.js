@@ -112,7 +112,7 @@ class Pain2 extends Tamagotchi {
       //   document.querySelector('.container')
       //   .append(newImg6)
       // }
-    }, 4000)
+    }, 5000)
   },
 
   // gameWinningAnimation(){
@@ -122,8 +122,8 @@ class Pain2 extends Tamagotchi {
   gettingHungry() {
     const hungerTimer = document.querySelector('#foodTimer')
 
-    this.hunger --
-    hungerTimer.innerText = `Hunger: ${this.hunger}`
+    // this.hunger --
+    // hungerTimer.innerText = `Hunger: ${this.hunger}`
 
     const intervalID = setInterval(() => {
       this.hunger --
@@ -151,8 +151,8 @@ class Pain2 extends Tamagotchi {
   gettingSleepy() {
     const sleepinessTimer = document.querySelector('#sleepTimer')
 
-    this.sleepiness --
-    sleepinessTimer.innerText = `Sleepiness: ${this.sleepiness}`
+    // this.sleepiness --
+    // sleepinessTimer.innerText = `Sleepiness: ${this.sleepiness}`
 
     const intervalID = setInterval(() => {
       this.sleepiness --
@@ -180,8 +180,8 @@ class Pain2 extends Tamagotchi {
   gettingBored() {
     const boredTimer = document.querySelector('#boredomTimer')
 
-    this.boredom --
-    boredTimer.innerText = `Boredom: ${this.boredom}`
+    // this.boredom --
+    // boredTimer.innerText = `Boredom: ${this.boredom}`
 
     const intervalID = setInterval(() => {
       this.boredom --

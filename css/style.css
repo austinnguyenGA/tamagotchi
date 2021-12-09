@@ -59,7 +59,7 @@ h1,.name{
 }
 
 .Pain4 {
-  animation-duration: 5s;
+  animation-duration: 2s;
   animation-name: slidein4;
   position: absolute;
   top: 350px;
@@ -68,11 +68,11 @@ h1,.name{
 
 @keyframes slidein4 {
   from {
-    margin-left: 100%;
+    margin-right: 100%;
     width: 300%
   }
   to {
-    margin-left: 350px;
+    margin-left: 100px;
     left: 100px;
   }
 }
@@ -106,12 +106,12 @@ h1,.name{
 
 @keyframes slidein6 {
   from {
-    margin-top: 100%;
-    width: 300%
+    margin-top: 80%;
+    width: 200%
   }
   to {
     margin-bottom: 30px;
-    left: 500px;
+    left: 0px;
   }
 }
 
