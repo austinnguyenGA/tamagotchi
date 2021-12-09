@@ -12,6 +12,8 @@ const removeTimer2 = document.querySelector('#sleepTimer')
 const removeTimer3 = document.querySelector('#boredomTimer')
 const removeAge = document.querySelector('#ageTimer')
 const removeContainer = document.querySelector('.container')
+const removePains = document.querySelector('.added-images')
+const removeName = document.querySelector('.name')
 
 class Tamagotchi {
   constructor(name, age, hunger, boredom, sleepiness) {
@@ -101,17 +103,21 @@ class Pain2 extends Tamagotchi {
         document.querySelector('.container')
         .append(newImg5)
       }
-      if(this.age === 7) {
-        const newImg5 = document.createElement('img')
-        newImg6.id = "added-images"
-        newImg6.className = "Naruto"
-        newImg6.src = "https://i.imgur.com/HxsVdOP.png"
-        newImg6.alt = "Naruto"
-        document.querySelector('.container')
-        .append(newImg6)
-      }
-    }, 1000)
+      // if(this.age === 7) {
+      //   const newImg6 = document.createElement('img')
+      //   newImg6.id = "added-images"
+      //   newImg6.className = "Naruto"
+      //   newImg6.src = "https://i.imgur.com/CPFkgEb.png"
+      //   newImg6.alt = "Naruto"
+      //   document.querySelector('.container')
+      //   .append(newImg6)
+      // }
+    }, 4000)
   },
+
+  // gameWinningAnimation(){
+  //
+  // },
 
   gettingHungry() {
     const hungerTimer = document.querySelector('#foodTimer')
@@ -132,9 +138,14 @@ class Pain2 extends Tamagotchi {
         if (removeContainer) {
           removeContainer.remove('.container')
         }
+        if (removeName) {
+          removeName.remove('.name')
+        }
           backgroundElement4.classList.add('gameOverScreen')
+
+        //alert("You've lost")
       }
-    }, 1000)
+    }, 5000)
   },
 
   gettingSleepy() {
@@ -156,9 +167,14 @@ class Pain2 extends Tamagotchi {
         if (removeContainer) {
           removeContainer.remove('.container')
         }
+        if (removeName) {
+          removeName.remove('.name')
+        }
         backgroundElement4.classList.add('gameOverScreen')
+
+        //alert("You've lost")
       }
-    }, 1000)
+    }, 5000)
   },
 
   gettingBored() {
@@ -180,9 +196,13 @@ class Pain2 extends Tamagotchi {
         if (removeContainer) {
           removeContainer.remove('.container')
         }
+        if (removeName) {
+          removeName.remove('.name')
+        }
         backgroundElement4.classList.add('gameOverScreen')
+        //alert("You've lost")
       }
-    }, 1000)
+    }, 5000)
   },
 
   feed(){
@@ -208,6 +228,11 @@ class Pain2 extends Tamagotchi {
 
     })
   },
+  setName(){
+    this.name = prompt('Name your tamagotchi')
+    const nameID = document.querySelector('.name')
+    nameID.innerText = `${this.name}`
+  }
 }
 
 const backgroundElement = document.querySelector('#background');
@@ -218,6 +243,8 @@ sleepButton.addEventListener('click', (event) => {
   setTimeout(() => {
     backgroundElement.classList.add('daytimeBackground')
     backgroundElement.classList.remove('nighttimeBackground')
+    removePains.remove('.added-images')
+
   }, 1000)
   }
 );
@@ -248,7 +275,8 @@ playButton.addEventListener('click', (event) => {
   }
 );
 
-const newTam = new Pain("bob")
+const newTam = new Pain("Pain")
+game.setName()
 game.growing()
 game.gettingHungry()
 game.gettingSleepy()
